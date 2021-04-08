@@ -1,0 +1,35 @@
+<head>
+    {% load static %}
+    <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        nav ul li a{
+  color: black;
+}
+.errorlist li{
+    text-color : red;
+
+}
+    </style>
+
+        <<title>GENESIS TRAINING</title>
+
+</head>
+<body>
+    <nav class="white">
+      <div class="nav-wrapper">
+          <img class="responsive-img" id="logo" src="{% static 'logo1.png'%}" style="margin:5 5 5 5px">
+        <a href="/" class="brand-logo" style="color:black"> Genesis Training</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {% include 'main/includes/navbaritems.html' %}
+        </ul>
+      </div>
+    </nav>
+    {% include 'main/includes/messaging.html' %}
+        {% block content %}
+        {% endblock %}
+  </body>
+  <!-- Prism JS -->
+  <script src="{% static "tinymce/js/prism.js" %}"></script>
+

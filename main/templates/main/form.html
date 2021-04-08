@@ -1,0 +1,71 @@
+<head>
+    {% load static %}
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('select').formSelect();
+      });
+    </script>
+    <!-- Compiled and minified CSS -->
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        [type="radio"]:not(:checked), [type="radio"]:checked {
+     position: relative;
+     opacity: 1;
+    }
+    .form_div{
+        margin-top:30px;
+        margin-left:15%;
+        margin-right:15%;
+    }
+
+        nav ul li a{
+  color: black;
+}
+input[type=submit], input[type=reset] {
+  background-color: yellow;
+  border: none;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 12px;
+}
+    </style>
+
+            <<title>GENESIS TRAINING</title>
+
+</head>
+
+<body>
+    <nav class="white">
+      <div class="nav-wrapper">          <img class="responsive-img" id="logo" src="{% static 'logo1.png'%}" style="margin:5 5 5 5px">
+        <a href="/" class="brand-logo" style="color:black"> Genesis Training</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {% include 'main/includes/navbaritems.html' %}
+        </ul>
+      </div>
+    </nav>
+    <div class="form_div">
+     <form method="POST" class="">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+
+        </form>
+        </div>
+  </body>
+
+
+
+
+

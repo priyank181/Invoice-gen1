@@ -1,0 +1,9 @@
+{% extends 'main/header.html' %}
+{% block content %}
+<h1 align="center">LIST</h1>
+    {% for i in names %}
+    <div class="row center ">
+        {{ i }}
+    </div>
+    {% endfor %}
+{% endblock %}
